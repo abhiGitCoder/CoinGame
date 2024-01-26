@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game History</title>
+</head>
+<body>
+    <h2>Game History</h2>
+    <!-- Game history content goes here -->
+    <table border="1">
+        <tr>
+            <th>Game ID</th>
+            <th>Result</th>
+        </tr>
+        <tr th:each="history : ${history}">
+            <td th:text="${history.game.id}"></td>
+            <td th:text="${history.result}"></td>
+        </tr>
+    </table>
+    <a href="/game">Play Again</a>
+</body>
+</html>
